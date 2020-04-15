@@ -18,7 +18,7 @@ let favourites = readLocalStorage();
 
 function connectToApi() {
   ulElement.innerHTML = '';
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputSearch.value}`)
+  fetch(`https://api.tvmaze.com/search/shows?q=${inputSearch.value}`)
     .then(response => response.json())
     .then(data => {
       showList = data;
